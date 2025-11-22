@@ -10,6 +10,25 @@
 
 export default {
 	async fetch(request, env, ctx) {
-		return new Response('Hello World!');
+		const corsHeaders = {
+			'Access-Control-Allow-Origin': '*',
+		};
+		const url = new URL(request.url);
+
+		switch (url.pathname) {
+			case '/':
+				return new Response('Hello World!', {
+					headers: {
+						...corsHeaders,
+					},
+				});
+
+			case '/hello':
+				return new Response('Hello Sexxion!', {
+					headers: {
+						...corsHeaders,
+					},
+				});
+		}
 	},
 };
