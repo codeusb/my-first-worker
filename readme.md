@@ -21,3 +21,9 @@ For Do you want to deploy your application?, choose No (we will be making some c
 https://blog.cloudflare.com/bringing-node-js-http-servers-to-cloudflare-workers/
 https://developers.cloudflare.com/workers/runtime-apis/nodejs/
 https://blog.cloudflare.com/nodejs-workers-2025/
+
+更改 build 命令
+
+Build-Build configuration-Deploy command
+
+`npm run deploy:express` / `npx wrangler deploy src/express.js`
