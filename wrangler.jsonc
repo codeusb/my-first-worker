@@ -4,8 +4,13 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
+	"compatibility_flags": ["nodejs_compat"],
 	"name": "my-first-worker",
 	"main": "src/index.js",
+	// "main": "src/http-server-handle.js",
+	// "main": "src/handle-as-node-request.js",
+	// "main": "src/express.js",
+	// "main": "src/koa.js",
 	"compatibility_date": "2025-11-21",
 	"observability": {
 		"enabled": true

@@ -6,11 +6,23 @@
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
+		"dev:express": "wrangler dev src/express.js --port 3000",
+		"deploy:express": "wrangler deploy src/express.js",
+		"dev:koa": "wrangler dev src/koa.js --port 3001",
+		"deploy:koa": "wrangler deploy src/koa.js",
+		"dev:http": "wrangler dev src/http-server-handle.js --port 3002",
+		"deploy:http": "wrangler deploy src/http-server-handle.js",
+		"dev:node": "wrangler dev src/handle-as-node-request.js --port 3003",
+		"deploy:node": "wrangler deploy src/handle-as-node-request.js",
 		"test": "vitest"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.8.19",
 		"vitest": "~3.2.0",
 		"wrangler": "^4.50.0"
+	},
+	"dependencies": {
+		"express": "^5.1.0",
+		"koa": "^3.1.1"
 	}
 }
